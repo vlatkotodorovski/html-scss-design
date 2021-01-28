@@ -1,0 +1,204 @@
+@import "colors";
+@import "media-queries";
+
+.topContent {
+  margin-left: 9.72vw;
+  margin-right: 9.72vw;
+  display: flex;
+  height: 81vh;
+  align-items: flex-end;
+  @include mobile {
+    flex-wrap: wrap;
+  }
+
+  &__left {
+    display: flex;
+    width: 85%;
+    flex-direction: column;
+    @include mobile {
+      flex-direction: column;
+      flex-basis: 100%;
+    }
+
+    .topText__main {
+      font-family: "Roboro", sans-serif;
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 4rem;
+      color: $white;
+      @include mobile {
+        font-size: 2rem;
+        line-height: initial;
+      }
+    }
+
+    .topText__small {
+      font-family: "Roboro", sans-serif;
+      font-size: 1.875rem;
+      font-weight: 300;
+      line-height: 1.875rem;
+      color: $white;
+      margin-top: 1rem;
+      letter-spacing: 1%;
+      @include mobile {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .topForm {
+      display: flex;
+      flex: 1;
+      flex-direction: row;
+      margin-top: 3rem;
+      max-height: 10vh;
+      width: 90%;
+      background-color: $white;
+      border-radius: 0px 22px 22px 22px;
+      padding-left: 2rem;
+      @include mobile {
+        display: contents;
+      }
+      &__input {
+        flex-basis: 66.5%;
+        border-top-left-radius: 22px;
+        flex-direction: column;
+        align-self: center;
+        ::placeholder {
+          color: $darkPurple;
+        }
+        @include mobile {
+          flex-basis: initial;
+        }
+
+        &--label {
+          font-size: 0.75rem;
+          color: $lightPurple;
+          font-weight: 400;
+          line-height: 14.4px;
+          margin-left: 3rem;
+          margin-bottom: 0.3rem;
+          letter-spacing: 0.04em;
+        }
+
+        &--imgInput {
+          display: flex;
+          flex-direction: row;
+
+          .inputField {
+            font-size: 1.25rem;
+            margin-left: 1.5rem;
+            font-weight: 400;
+            font-size: 1.25rem;
+            line-height: 1.25rem;
+            border: none;
+            margin-top: 0.3rem;
+            color: $darkPurple;
+            outline: none;
+            @include mobile {
+              border-radius: 8px;
+              padding: 1rem;
+              margin-bottom: 0.3rem;
+            }
+          }
+          .inputImg {
+            width: 24px;
+            height: 24px;
+            align-self: center;
+          }
+        }
+      }
+
+      &__dropdown {
+        flex-basis: 20%;
+        display: flex;
+        flex-direction: column;
+        height: 10vh;
+        background-color: #d9d6f1;
+        justify-content: center;
+        align-items: center;
+        border-radius: 9px 0px 0px 9px;
+        @include mobile {
+          flex-basis: initial;
+          border-radius: 22px;
+          margin-bottom: 0.3rem;
+        }
+
+        &--label {
+          font-size: 0.75rem;
+          color: $lightPurple;
+          letter-spacing: 0.04em;
+          margin-bottom: 0.3rem;
+          font-weight: 400;
+        }
+
+        &--select {
+          border: none;
+          color: $darkPurple;
+          background-color: #d9d6f1;
+          font-size: 1.125rem;
+          line-height: 1.125rem;
+          cursor: pointer;
+        }
+      }
+
+      &__form-button {
+        flex-basis: 17.5%;
+        background-color: $orange;
+        color: $white;
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 100%;
+        border-radius: 0px 22px 22px 0px;
+        border: none;
+        cursor: pointer;
+        @include mobile {
+          flex-basis: 13.5%;
+          padding: 1.5rem;
+          border-radius: 22px;
+        }
+      }
+    }
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    margin-top: 17%;
+    width: 15%;
+    height: 55vh;
+    @include mobile {
+      height: initial;
+      margin-top: 3rem;
+      flex-direction: row;
+    }
+    &--groupIcons {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      align-self: flex-end;
+      @include mobile {
+        flex-direction: row;
+        margin-right: 3rem;
+      }
+    }
+
+    &--mouse {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-self: flex-end;
+      @include mobile {
+        flex-direction: row;
+      }
+    }
+    img {
+      width: 30px;
+      height: 30px;
+      align-self: center;
+      margin-bottom: 2rem;
+      @include mobile {
+        margin-right: 2rem;
+      }
+    }
+  }
+}

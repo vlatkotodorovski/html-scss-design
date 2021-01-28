@@ -1,0 +1,64 @@
+@import "colors";
+@import "media-queries";
+
+.navbar {
+  margin-left: 9.72vw;
+  margin-right: 9.72vw;
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  align-items: center;
+  @include mobile {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  &__menu {
+    &--links {
+      color: $white;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: bold;
+      line-height: 15.6px;
+      letter-spacing: 0.02em;
+      line-height: 120%;
+      font-family: "Roboto+Condensed", sans-serif;
+      margin-right: 2rem;
+    }
+    &--links:last-child {
+      margin-right: 0px;
+    }
+  }
+
+  &__logo {
+    color: $white;
+    text-decoration: none;
+    font-size: 31px;
+    font-weight: bold;
+    margin-right: 2rem;
+  }
+
+  &__loginAndRegister {
+    color: $white;
+    font-size: 13px;
+    @include mobile {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+    &--links {
+      color: $white;
+      text-decoration: none;
+    }
+    &--links:last-child {
+      border: 2px solid #fc6868;
+      box-sizing: border-box;
+      border-radius: 100px;
+      padding: 0.5rem 1.5rem;
+      margin-left: 2rem;
+      &:hover {
+        background-color: #fc6868;
+      }
+    }
+  }
+}
